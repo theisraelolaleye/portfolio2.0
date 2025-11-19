@@ -1,15 +1,24 @@
-import React from 'react'
+import React from "react";
+import { Metadata } from "next";
+import ProjectsClient from "./ProjectsClient";
 
-const ProjectPage = () => {
-  return (
-    <div className=' grid grid-cols-2 w-full gap-10 overflow-scroll ' >
-      <div className=' bg-blue-300 h-[300px] w-full '>        jnojndf      </div>
-      <div className=' bg-blue-300 h-[300px] w-full '>        jnojndf      </div>
-      <div className=' bg-blue-300 h-[300px] w-full '>        jnojndf      </div>
-      <div className=' bg-blue-300 h-[300px] w-full '>        jnojndf      </div>
-      <div className=' bg-blue-300 h-[300px] w-full '>        jnojndf      </div>
-    </div>
-  )
+export const metadata: Metadata = {
+  title: "Projects",
+  description:
+    "Explore my portfolio of frontend development projects, including web applications, mobile apps, and UI/UX designs built with React, Next.js, and TypeScript.",
+  openGraph: {
+    title: "Projects | Israel Olaleye",
+    description:
+      "Explore my portfolio of frontend development projects, including web applications, mobile apps, and UI/UX designs.",
+    url: "/projects",
+  },
+  twitter: {
+    title: "Projects | Israel Olaleye",
+    description:
+      "Explore my portfolio of frontend development projects, including web applications, mobile apps, and UI/UX designs.",
+  },
+};
+
+export default function ProjectPage() {
+  return <ProjectsClient />;
 }
-
-export default ProjectPage
