@@ -67,6 +67,9 @@ const Header = () => {
                     <Link href='/blog' onClick={menuToggler}>Blog</Link>
                   </li>
                   <li className=' text-2xl md:text-3xl hover:text-white transition-colors ' >
+                    <Link href='/about' onClick={menuToggler}>About</Link>
+                  </li>
+                  <li className=' text-2xl md:text-3xl hover:text-white transition-colors ' >
                     <Link href='/contact' onClick={menuToggler}>Contact</Link>
                   </li>
                 </ul>

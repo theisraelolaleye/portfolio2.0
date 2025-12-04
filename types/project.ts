@@ -8,7 +8,7 @@ export interface Project {
   liveUrl?: string;
   githubUrl?: string;
   featured?: boolean;
-  category: "web" | "mobile" | "ui-ux" | "other";
+  category: "web" | "mobile" | "wordpress" | "other";
   year: number;
   role?: string;
 }

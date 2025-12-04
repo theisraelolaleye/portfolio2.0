@@ -19,7 +19,7 @@ export default function ProjectsClient() {
     { label: "All Projects", value: "all" },
     { label: "Web", value: "web" },
     { label: "Mobile", value: "mobile" },
-    { label: "UI/UX", value: "ui-ux" },
+    { label: "Wordpress", value: "wordpress" },
     { label: "Other", value: "other" },
   ];
 
@@ -32,7 +32,7 @@ export default function ProjectsClient() {
         </h1>
         <p className="text-gray-400 text-base md:text-lg max-w-2xl">
           A collection of projects I&apos;ve worked on, showcasing my skills in frontend
-          development, UI/UX design, and problem-solving.
+          development, web design with Wordpress, and problem-solving.
         </p>
       </div>
 
