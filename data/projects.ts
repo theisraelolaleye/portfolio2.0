@@ -73,7 +73,7 @@ export const projects: Project[] = [
     tags: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
     liveUrl: "https://jobfrica.vercel.app/",
     githubUrl: "https://github.com/theisraelolaleye/alx-project-nexus",
-    featured: false,
+    featured: true,
     category: "web",
     year: 2025,
   },
