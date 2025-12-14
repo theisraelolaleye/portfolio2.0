@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layouts/Header";
+import Link from "next/link";
+import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 
 const geistSans = Geist({
@@ -93,11 +96,43 @@ export default function RootLayout({
         <main className=" min-h-screen pt-28 pb-20 md:pb-14 flex w-full">
 
           {/* left - Social media icons */}
-          <div className="hidden lg:flex w-[2%] flex-col h-full justify-center items-center gap-3 fixed left-0 top-1/2 -translate-y-1/2">
-            <div className="hover:scale-110 transition-transform cursor-pointer">FB</div>
-            <div className="hover:scale-110 transition-transform cursor-pointer">IG</div>
-            <div className="hover:scale-110 transition-transform cursor-pointer">X</div>
-            <div className="hover:scale-110 transition-transform cursor-pointer">LN</div>
+          <div className="hidden lg:flex w-[2%] flex-col h-full justify-center items-center gap-4 fixed left-0 top-1/2 -translate-y-1/2">
+            <Link
+              href="https://web.facebook.com/theisraelolaleye"
+              aria-label="Facebook"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:scale-110 transition-transform cursor-pointer text-gray-300 hover:text-white"
+            >
+              <FaFacebookF className="w-5 h-5" />
+            </Link>
+            <Link
+              href="https://www.instagram.com/theisraelolaleye"
+              aria-label="Instagram"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:scale-110 transition-transform cursor-pointer text-gray-300 hover:text-white"
+            >
+              <FaInstagram className="w-5 h-5" />
+            </Link>
+            <Link
+              href="https://twitter.com/_israelolaleye"
+              aria-label="X (Twitter)"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:scale-110 transition-transform cursor-pointer text-gray-300 hover:text-white"
+            >
+              <FaXTwitter className="w-5 h-5" />
+            </Link>
+            <Link
+              href="https://www.linkedin.com/in/theisraelolaleye"
+              aria-label="LinkedIn"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:scale-110 transition-transform cursor-pointer text-gray-300 hover:text-white"
+            >
+              <FaLinkedinIn className="w-5 h-5" />
+            </Link>
           </div>
 
           {/* Main content area */}
@@ -113,10 +148,42 @@ export default function RootLayout({
 
         {/* Mobile social icons - bottom fixed */}
         <div className="lg:hidden fixed bottom-16 left-0 right-0 flex justify-center gap-6 pb-2 bg-gradient-to-t from-black/50 to-transparent backdrop-blur-sm">
-          <div className="hover:scale-110 transition-transform cursor-pointer text-sm">FB</div>
-          <div className="hover:scale-110 transition-transform cursor-pointer text-sm">IG</div>
-          <div className="hover:scale-110 transition-transform cursor-pointer text-sm">X</div>
-          <div className="hover:scale-110 transition-transform cursor-pointer text-sm">LN</div>
+          <Link
+            href="https://web.facebook.com/theisraelolaleye"
+            aria-label="Facebook"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:scale-110 transition-transform cursor-pointer text-gray-300 hover:text-white"
+          >
+            <FaFacebookF className="w-5 h-5" />
+          </Link>
+          <Link
+            href="https://www.instagram.com/theisraelolaleye"
+            aria-label="Instagram"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:scale-110 transition-transform cursor-pointer text-gray-300 hover:text-white"
+          >
+            <FaInstagram className="w-5 h-5" />
+          </Link>
+          <Link
+            href="https://twitter.com/_israelolaleye"
+            aria-label="X (Twitter)"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:scale-110 transition-transform cursor-pointer text-gray-300 hover:text-white"
+          >
+            <FaXTwitter className="w-5 h-5" />
+          </Link>
+          <Link
+            href="https://www.linkedin.com/in/theisraelolaleye"
+            aria-label="LinkedIn"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:scale-110 transition-transform cursor-pointer text-gray-300 hover:text-white"
+          >
+            <FaLinkedinIn className="w-5 h-5" />
+          </Link>
         </div>
 
         <footer className="fixed bottom-0 left-0 right-0 h-10 md:h-12 bg-black flex items-center justify-center text-xs md:text-sm">
