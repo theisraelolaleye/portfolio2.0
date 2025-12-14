@@ -59,7 +59,7 @@ export default function Home() {
           {/* Quick Stats */}
           <div className="flex flex-wrap gap-6 md:gap-8 pt-6 md:pt-8 border-t border-gray-800">
             <div>
-              <p className="text-2xl md:text-3xl font-bold text-blue-400">3+</p>
+              <p className="text-2xl md:text-3xl font-bold text-blue-400">2+</p>
               <p className="text-gray-400 text-sm">Years Experience</p>
             </div>
             <div>
