@@ -9,6 +9,6 @@ export interface Project {
   githubUrl?: string;
   featured?: boolean;
   category: "web" | "mobile" | "wordpress" | "other";
-  year: number;
+  year?: number;
   role?: string;
 }

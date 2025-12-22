@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layouts/Header";
+import Providers from "@/components/common/Providers";
+import ThemeToggle from "@/components/common/ThemeToggle";
 import Link from "next/link";
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
@@ -88,15 +90,67 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased relative max-w-[1480px] mx-auto `}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased relative max-w-[1480px] mx-auto bg-white text-gray-900 dark:bg-black dark:text-gray-100`}
       >
-        <Header />
-        <main className=" min-h-screen pt-28 pb-20 md:pb-14 flex w-full">
+        <Providers>
+          <Header />
+          <main className=" min-h-screen pt-28 pb-20 md:pb-14 flex w-full">
 
-          {/* left - Social media icons */}
-          <div className="hidden lg:flex w-[2%] flex-col h-full justify-center items-center gap-4 fixed left-0 top-1/2 -translate-y-1/2">
+            {/* left - Social media icons */}
+            <div className="hidden lg:flex w-[2%] flex-col h-full justify-center items-center gap-4 fixed left-0 top-1/2 -translate-y-1/2">
+              <Link
+                href="https://web.facebook.com/theisraelolaleye"
+                aria-label="Facebook"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:scale-110 transition-transform cursor-pointer text-gray-300 hover:text-white"
+              >
+                <FaFacebookF className="w-5 h-5" />
+              </Link>
+              <Link
+                href="https://www.instagram.com/theisraelolaleye"
+                aria-label="Instagram"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:scale-110 transition-transform cursor-pointer text-gray-300 hover:text-white"
+              >
+                <FaInstagram className="w-5 h-5" />
+              </Link>
+              <Link
+                href="https://twitter.com/_israelolaleye"
+                aria-label="X (Twitter)"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:scale-110 transition-transform cursor-pointer text-gray-300 hover:text-white"
+              >
+                <FaXTwitter className="w-5 h-5" />
+              </Link>
+              <Link
+                href="https://www.linkedin.com/in/theisraelolaleye"
+                aria-label="LinkedIn"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:scale-110 transition-transform cursor-pointer text-gray-300 hover:text-white"
+              >
+                <FaLinkedinIn className="w-5 h-5" />
+              </Link>
+            </div>
+
+            {/* Main content area */}
+            <div className="flex justify-center w-full lg:w-[96%] lg:mx-auto px-4 md:px-6">
+              {children}
+            </div>
+
+            {/* right - Creative Developer text */}
+            <div className="hidden lg:flex w-[2%] flex-col h-full justify-center items-center fixed right-0 top-1/2 -translate-y-1/2">
+              <p className="text-gray-500 rotate-90 uppercase whitespace-nowrap text-sm">Creative Developer</p>
+            </div>
+          </main>
+
+          {/* Mobile social icons - bottom fixed */}
+          <div className="lg:hidden fixed bottom-16 left-0 right-0 flex justify-center gap-6 pb-2 bg-gradient-to-t from-black/50 to-transparent backdrop-blur-sm">
             <Link
               href="https://web.facebook.com/theisraelolaleye"
               aria-label="Facebook"
@@ -135,60 +189,15 @@ export default function RootLayout({
             </Link>
           </div>
 
-          {/* Main content area */}
-          <div className="flex justify-center w-full lg:w-[96%] lg:mx-auto px-4 md:px-6">
-            {children}
+          {/* Floating theme toggle - bottom corner */}
+          <div className="fixed z-50 bottom-24 left-4 md:left-6 md:bottom-16">
+            <ThemeToggle />
           </div>
 
-          {/* right - Creative Developer text */}
-          <div className="hidden lg:flex w-[2%] flex-col h-full justify-center items-center fixed right-0 top-1/2 -translate-y-1/2">
-            <p className="text-gray-500 rotate-90 uppercase whitespace-nowrap text-sm">Creative Developer</p>
-          </div>
-        </main>
-
-        {/* Mobile social icons - bottom fixed */}
-        <div className="lg:hidden fixed bottom-16 left-0 right-0 flex justify-center gap-6 pb-2 bg-gradient-to-t from-black/50 to-transparent backdrop-blur-sm">
-          <Link
-            href="https://web.facebook.com/theisraelolaleye"
-            aria-label="Facebook"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:scale-110 transition-transform cursor-pointer text-gray-300 hover:text-white"
-          >
-            <FaFacebookF className="w-5 h-5" />
-          </Link>
-          <Link
-            href="https://www.instagram.com/theisraelolaleye"
-            aria-label="Instagram"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:scale-110 transition-transform cursor-pointer text-gray-300 hover:text-white"
-          >
-            <FaInstagram className="w-5 h-5" />
-          </Link>
-          <Link
-            href="https://twitter.com/_israelolaleye"
-            aria-label="X (Twitter)"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:scale-110 transition-transform cursor-pointer text-gray-300 hover:text-white"
-          >
-            <FaXTwitter className="w-5 h-5" />
-          </Link>
-          <Link
-            href="https://www.linkedin.com/in/theisraelolaleye"
-            aria-label="LinkedIn"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:scale-110 transition-transform cursor-pointer text-gray-300 hover:text-white"
-          >
-            <FaLinkedinIn className="w-5 h-5" />
-          </Link>
-        </div>
-
-        <footer className="fixed bottom-0 left-0 right-0 h-10 md:h-12 bg-black flex items-center justify-center text-xs md:text-sm">
-          <p>© 2025 Israel Olaleye. All rights reserved.</p>
-        </footer>
+          <footer className="fixed bottom-0 left-0 right-0 h-10 md:h-12 bg-gray-900 dark:bg-black text-white dark:text-gray-100 flex items-center justify-center text-xs md:text-sm">
+            <p>© 2025 Israel Olaleye. All rights reserved.</p>
+          </footer>
+        </Providers>
       </body>
     </html>
   );

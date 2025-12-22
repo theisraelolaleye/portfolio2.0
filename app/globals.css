@@ -12,11 +12,15 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Class-based theming for explicit dark/light toggling */
+.dark {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+}
+
+.light {
+  --background: #ffffff;
+  --foreground: #171717;
 }
 
 body {
