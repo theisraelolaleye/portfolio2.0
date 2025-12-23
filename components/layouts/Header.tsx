@@ -40,7 +40,7 @@ const Header = () => {
         <h1 className=' text-base md:text-lg ' >Israel Olaleye</h1>
       </div>
 
-      <Link href="/" className=' mx-3 md:mx-5 text-base md:text-lg font-bold ' >LOGO</Link>
+      {/* <Link href="/" className=' mx-3 md:mx-5 text-base md:text-lg font-bold ' >LOGO</Link> */}
 
       <div ref={toggleRef} className=' flex gap-3 md:gap-5 items-center text-base md:text-lg cursor-pointer ' onClick={menuToggler}>
         {
