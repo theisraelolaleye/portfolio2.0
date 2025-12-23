@@ -34,10 +34,10 @@ const Header = () => {
   }, [showmenu])
 
   return (
-    <div className=' flex justify-between items-center px-4 md:px-8 py-6 md:py-10 backdrop-blur-2xl z-30 fixed top-0 left-0 right-0  ' >
+    <div className=' flex justify-between items-center px-4 md:px-8 py-6 md:py-10 backdrop-blur-2xl z-30 fixed top-0 left-0 right-0 shadow-2xl ' >
 
       <div className=' flex gap-3 md:gap-5 items-center ' >
-        <h1 className=' text-base md:text-lg ' >Israel Olaleye</h1>
+        <h1 className=' text-base md:text-2xl ' >Israel Olaleye</h1>
       </div>
 
       {/* <Link href="/" className=' mx-3 md:mx-5 text-base md:text-lg font-bold ' >LOGO</Link> */}

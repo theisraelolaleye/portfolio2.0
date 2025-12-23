@@ -24,9 +24,9 @@ export default function Home() {
         {/* Hero Content */}
         <div className="flex-1 space-y-6 md:space-y-8">
           <div className="space-y-3 md:space-y-4">
-            <p className="text-blue-400 font-medium text-sm md:text-base">
+            {/* <p className="text-blue-400 font-medium text-sm md:text-base">
               👋 Hello, I&apos;m
-            </p>
+            </p> */}
             <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight">
               Israel Olaleye
             </h1>
@@ -37,7 +37,7 @@ export default function Home() {
 
           <p className="text-gray-300 text-base md:text-lg lg:text-xl leading-relaxed max-w-2xl">
             I craft beautiful, accessible, and high-performance web experiences that bring ideas to life.
-            Based in Lagos, Nigeria, I specialize in building modern web applications with React, Next.js, and TypeScript.
+            A Computer Science graduate based in Lagos, Nigeria, I specialize in building modern web applications with React, Next.js, and TypeScript.
           </p>
 
           {/* CTA Buttons */}

@@ -54,6 +54,10 @@ export default function AboutPage() {
             <span className="text-blue-400 font-semibold">Independence Lab Technologies</span>{" "}
             where I bring digital ideas to life. */}
           </p>
+          <p>
+            I&apos;m a Computer Science graduate, which grounds my approach in solid fundamentals
+            and a strong problem-solving mindset.
+          </p>
 
           <p>
             My journey into web development started with curiosity and evolved into a career
