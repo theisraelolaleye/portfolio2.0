@@ -149,14 +149,14 @@ export default function RootLayout({
             </div>
           </main>
 
-          {/* Mobile social icons - bottom fixed */}
-          <div className="lg:hidden fixed bottom-16 left-0 right-0 flex justify-center gap-6 pb-2 bg-gradient-to-t from-black/50 to-transparent backdrop-blur-sm">
+          {/* Mobile social icons - right fixed vertical */}
+          <div className="lg:hidden fixed right-4 md:right-6 top-1/2 -translate-y-1/2 flex flex-col items-center gap-6 z-40">
             <Link
               href="https://web.facebook.com/theisraelolaleye"
               aria-label="Facebook"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:scale-110 transition-transform cursor-pointer text-gray-300 hover:text-white"
+              className="hover:scale-110 transition-transform cursor-pointer text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
             >
               <FaFacebookF className="w-5 h-5" />
             </Link>
@@ -165,7 +165,7 @@ export default function RootLayout({
               aria-label="Instagram"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:scale-110 transition-transform cursor-pointer text-gray-300 hover:text-white"
+              className="hover:scale-110 transition-transform cursor-pointer text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
             >
               <FaInstagram className="w-5 h-5" />
             </Link>
@@ -174,7 +174,7 @@ export default function RootLayout({
               aria-label="X (Twitter)"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:scale-110 transition-transform cursor-pointer text-gray-300 hover:text-white"
+              className="hover:scale-110 transition-transform cursor-pointer text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
             >
               <FaXTwitter className="w-5 h-5" />
             </Link>
@@ -183,7 +183,7 @@ export default function RootLayout({
               aria-label="LinkedIn"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:scale-110 transition-transform cursor-pointer text-gray-300 hover:text-white"
+              className="hover:scale-110 transition-transform cursor-pointer text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
             >
               <FaLinkedinIn className="w-5 h-5" />
             </Link>

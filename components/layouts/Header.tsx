@@ -65,7 +65,7 @@ const Header = () => {
             <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40" onClick={menuToggler}></div>
 
             {/* Menu Panel */}
-            <div ref={menuRef} className=" flex flex-col justify-between py-8 md:py-10 px-6 md:pr-10 items-end fixed top-20 md:top-28 right-0 bg-white text-gray-900 dark:bg-gray-800 dark:text-gray-100 h-[calc(100vh-5rem)] md:h-[calc(100vh-7rem)] w-[85%] sm:w-[60%] md:w-1/2 lg:w-1/4 z-50 shadow-2xl">
+            <div ref={menuRef} className=" flex flex-col justify-between py-8 md:py-10 px-6 md:pr-10 items-end fixed top-20 md:top-28 right-0 bg-white text-gray-900 dark:bg-gray-800 dark:text-gray-100 h-[calc(100vh-5rem)] md:h-[calc(100vh-7rem)] w-[65%] sm:w-[50%] md:w-1/2 lg:w-1/4 z-50 shadow-2xl">
 
               <div className=' flex items-center gap-3 text-sm md:text-base ' >
                 <p className=' cursor-pointer hover:text-gray-700 dark:hover:text-white transition-colors ' >EN.</p>
